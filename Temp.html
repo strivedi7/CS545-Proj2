@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <script>
+            function isValidDate(){               
+                var dateOfBirth = new Date(document.getElementById("x").value);
+                var AgeDiffereance = Date.now() - dateOfBirth.getTime();
+                var DateC = new Date(AgeDiffereance);
+                var age = Math.abs(DateC.getUTCFullYear() - 1970);
+                window.alert(age);
+                if (age < 90 & age > 5)
+                {                   
+                     window.alert("valid");              
+                }else{
+                    window.alert("Invalid");
+                }
+            }
+        </script>
+        <input id="x" type="text"/>
+        <button onclick="isValidDate()">Validate date</button>
+    </body>
+</html>
